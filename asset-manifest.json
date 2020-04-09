@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/littie-js/static/css/main.248f2439.chunk.css",
+    "main.js": "/littie-js/static/js/main.84beee36.chunk.js",
+    "main.js.map": "/littie-js/static/js/main.84beee36.chunk.js.map",
+    "runtime-main.js": "/littie-js/static/js/runtime-main.a4e52c11.js",
+    "runtime-main.js.map": "/littie-js/static/js/runtime-main.a4e52c11.js.map",
+    "static/js/2.15d872cd.chunk.js": "/littie-js/static/js/2.15d872cd.chunk.js",
+    "static/js/2.15d872cd.chunk.js.map": "/littie-js/static/js/2.15d872cd.chunk.js.map",
+    "index.html": "/littie-js/index.html",
+    "precache-manifest.0b06d9a181d461b52f5a51b377098a42.js": "/littie-js/precache-manifest.0b06d9a181d461b52f5a51b377098a42.js",
+    "service-worker.js": "/littie-js/service-worker.js",
+    "static/css/main.248f2439.chunk.css.map": "/littie-js/static/css/main.248f2439.chunk.css.map",
+    "static/js/2.15d872cd.chunk.js.LICENSE.txt": "/littie-js/static/js/2.15d872cd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4e52c11.js",
+    "static/js/2.15d872cd.chunk.js",
+    "static/css/main.248f2439.chunk.css",
+    "static/js/main.84beee36.chunk.js"
+  ]
+}
