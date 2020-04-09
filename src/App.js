@@ -7,6 +7,8 @@ import handsAnimation from './data/hands.json';
 import foreheadAnimation from './data/forehead.json';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+
+// declare types of animation
 const types = {
   MY_BOX: 'MY_BOX',
   CORONA: 'CORONA',
@@ -27,9 +29,9 @@ class App extends Component {
 
   componentDidUpdate() {
     var { animation_key, refValue } = this.state;
-    console.log(refValue)
     var animationData = this.setAnimation(animation_key);
     if (refValue) {
+      // using loadAnimation method of lotties library for load my animation 
       lottiie.loadAnimation({
         container: refValue, // the dom element that will contain the animation
         renderer: 'svg',
@@ -40,6 +42,7 @@ class App extends Component {
     }
   }
 
+  // create function toggleAnimation when cliked button
   toggleAnimation = (e) => {
     var value = e.target.value
     var refValue = this.setRefValue(value);
@@ -50,6 +53,7 @@ class App extends Component {
     })
   }
 
+  // create function setAnimation for set animationData of each button when click
   setAnimation(type) {
     switch (type) {
       case types.MY_BOX:
@@ -65,6 +69,7 @@ class App extends Component {
     }
   }
 
+  // create function setRefValue for set ref value of each div tag which animation will be displayed 
   setRefValue(value) {
     switch (value) {
       case types.MY_BOX:
@@ -102,6 +107,7 @@ class App extends Component {
             <Col xs={3}>
               {show ? <div className="hands" ref={hands => this.hands = hands}></div> : ''}
             </Col>
+
             <Col xs={3}>
               {show ? <div className="forehead" ref={forehead => this.forehead = forehead}></div> : ''}
             </Col>
