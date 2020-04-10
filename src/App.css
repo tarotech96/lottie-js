@@ -3,15 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.nav-link {
-  margin: 10px;
-  text-decoration: none;
+h1 {
+  text-align: center;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #F0F338;
 }
-
 .toggleBtns {
   display: flex;
   justify-content: space-around;
+}
+
+.myBtn {
+  width: 80px;
+  height: 40px;
+  background: #3BF11D;
+  border-radius: 8px ;
+  cursor: pointer;
+}
+
+.myBtn:hover {
+  background: #1DBEF1;
 }
 
 .myanimation {

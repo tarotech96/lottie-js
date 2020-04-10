@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import lottiie from 'lottie-web';
 import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import boxAnimation from './data/my_box.json';
 import coronaAnimation from './data/corona.json';
 import handsAnimation from './data/hands.json';
 import foreheadAnimation from './data/forehead.json';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import fatoAnimation from './data/fato.json';
+import learningAnimation from './data/learning.json';
+import pepcoinAnimation from './data/pepcoin.json';
+import walkingAnimation from './data/walking.json';
 
 // declare types of animation
 const types = {
   MY_BOX: 'MY_BOX',
   CORONA: 'CORONA',
   HANDS: 'HANDS',
-  FOREHEAD: 'FOREHEAD'
+  FOREHEAD: 'FOREHEAD',
+  FATO: 'FATO',
+  LEARNING: 'LEARNING',
+  PEPCOIN: 'PEPCOIN',
+  WALKING: 'WALKING'
 }
 
 
@@ -64,6 +72,14 @@ class App extends Component {
         return handsAnimation;
       case types.FOREHEAD:
         return foreheadAnimation;
+      case types.FATO:
+        return fatoAnimation;
+      case types.LEARNING:
+        return learningAnimation;
+      case types.PEPCOIN:
+        return pepcoinAnimation;
+      case types.WALKING:
+        return walkingAnimation;
       default:
         return null;
     }
@@ -80,6 +96,14 @@ class App extends Component {
         return this.hands;
       case types.FOREHEAD:
         return this.forehead;
+      case types.FATO:
+        return this.fato;
+      case types.LEARNING:
+        return this.learning;
+      case types.PEPCOIN:
+        return this.pepcoin;
+      case types.WALKING:
+        return this.walking;
       default:
         return null;
     }
@@ -88,11 +112,16 @@ class App extends Component {
     var show = this.state.show;
     return (
       <Container>
+        <h1>Generate Animation</h1>
         <div className="toggleBtns">
-          <Button variant="outline-primary" onClick={this.toggleAnimation} value={'MY_BOX'} >Box</Button>
-          <Button variant="outline-success" onClick={this.toggleAnimation} value={'CORONA'} >Corona Virus</Button>
-          <Button variant="outline-warning" onClick={this.toggleAnimation} value={'HANDS'} >Washing Hand</Button>
-          <Button variant="outline-info" onClick={this.toggleAnimation} value={'FOREHEAD'} >Forehead</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'MY_BOX'} >Box</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'CORONA'} >Corona Virus</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'HANDS'} >Washing Hand</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'FOREHEAD'} >Forehead</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'FATO'} >Fato</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'LEARNING'} >Learning</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'PEPCOIN'} >Pepcoin</Button>
+          <Button className="myBtn" onClick={this.toggleAnimation} value={'WALKING'} >Walking</Button>
         </div>
         <Row>
           <div className="myanimation">
@@ -110,6 +139,26 @@ class App extends Component {
 
             <Col xs={3}>
               {show ? <div className="forehead" ref={forehead => this.forehead = forehead}></div> : ''}
+            </Col>
+          </div>
+        </Row>
+
+        <Row>
+          <div className="myanimation">
+            <Col xs={3}>
+              {show ? <div className="fato" ref={fato => this.fato = fato}></div> : ''}
+            </Col>
+
+            <Col xs={3}>
+              {show ? <div className="learning" ref={learning => this.learning = learning}></div> : ''}
+            </Col>
+
+            <Col xs={3}>
+              {show ? <div className="pepcoin" ref={pepcoin => this.pepcoin = pepcoin}></div> : ''}
+            </Col>
+
+            <Col xs={3}>
+              {show ? <div className="walking" ref={walking => this.walking = walking}></div> : ''}
             </Col>
           </div>
         </Row>
